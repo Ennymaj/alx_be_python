@@ -14,13 +14,16 @@ match priority:
 
 if time_bound == "yes":
     if priority in ("high", "medium"):
-        reminder += " that requires immediate attention today!"
+        print(f"Reminder: {reminder} that requires immediate attention today!")
     elif priority == "low":
-        reminder += ". Try to complete it soon!"
+        print(f"Reminder: {reminder}. Try to complete it soon!")
+    else:
+        print(f"Reminder: {reminder}")
 else:
     if priority in ("high", "medium"):
-        reminder += ". Try to schedule it soon."
+        print(f"Reminder: {reminder}. Try to schedule it soon.")
     elif priority == "low":
-        reminder += ". Consider completing it when you have free time."
+        print(f"Reminder: {reminder}. Consider completing it when you have free time.")
+    else:
+        print(f"Reminder: {reminder}")
 
-print(reminder)
